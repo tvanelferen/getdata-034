@@ -10,7 +10,7 @@ Assign the names in `X-test`to the columns
 ###select columns with means and SD's
 With `extract_columnNames <- grepl("mean|std", columnNames)` a logical vector is created, that is used by `[,extract_columnNames]` in the next line to select the columns with `mean` or `std` in it.
 ###activities
-Then, we're the file `activity_labels.txt` to provide labels for `y_test`
+Then, we're loading the file `activity_labels.txt` to provide labels for `y_test`
 ###Cbind test
 And using `cbind`we're glueing the whole test-part together.
 #and now all the same for the 'train'-data:
@@ -19,7 +19,7 @@ Using the `extract_columnNames`
 ###Load activity data
 Using `activity_labels.txt`again to provide the correct labels
 ###Cbind train
-Finishing the `train` part
+Finishing the `train` part by binding the columns.
 ###Merge test and train data
 First putting everything in place, using `rbind`. Then the proper labels are applied. Then the tables are merged, using `melt()`
 ###Apply mean function to dataset using dcast function
